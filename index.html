@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Mahasiswa Informatika</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .hero-section {
+            /* background: linear-gradient(to right, #4e54c8, #8f94fb); */
+            background: #e7e7e7;
+            color: rgb(0, 0, 0);
+            padding: 80px 0;
+            text-align: center;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+        .footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+    .rounded-circle {
+        border: 4px solid #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .details p {
+        font-size: 1rem;
+    }
+    .modal-body {
+        padding: 0;
+    }
+    iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Profile</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Tentang Saya</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portofolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <!-- Hero Section (Dengan ID Card) -->
+    <section id="home" class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <!-- Foto di Sebelah Kiri -->
+                <div class="col-md-4 text-center text-md-start">
+                    <img src="asset/foto-diri.png" class="rounded-circle border" width="200px" alt="Foto">
+                </div>
+            
+                <!-- Informasi di Sebelah Kanan -->
+                <div class="col-md-6">
+                    <h1>John Presly N</h1>
+                    <h2 class="text-muted">Universitas Teknologi Bandung</h2>
+                    <div class="details mt-3">
+                        <p class="mb-1"><strong>Jurusan:</strong> Informatika</p>
+                        <p class="mb-1"><strong>Kota:</strong>Bandung</p>
+                        <p class="mb-1"><strong>Email:</strong> johnpn.3504@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Tentang Saya -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Tentang Saya</h2>
+            <p class="text-center">Saya adalah mahasiswa Informatika yang sedang belajar teknologi baru, pengembangan web, dan cloud computing. Saya selalu berusaha untuk terus berkembang dan belajar lebih banyak.</p>
+        </div>
+    </section>
+
+    <!-- Portofolio -->
+    <section id="portfolio" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Portofolio</h2>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="asset/ilt-android.png" class="card-img-top d-block mx-auto img-fluid" alt="Card image cap" style="max-width: 80%;">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Aplikasi ToDoLi Berbasis Android</b></h5>
+                            <p class="card-text">Aplikasi ToDoLi ini menerapkan interaksi AI untuk membantu menyusun daftar kerja.</p>
+                            <p class="mb-0">Pemrograman dan Sumber Daya:</p>
+                            <div class="d-flex align-items-center mb-4">
+                                <img src="https://cdn-icons-png.flaticon.com/128/226/226777.png" alt="Java Logo" width="30" class="me-2">
+                                <img src="asset/sqlite.svg" alt="SQlite Logo" width="30" class="me-2">
+                            </div>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectPreviewModal1">Lihat Projek</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="asset/ilt-mikrokontroler.png" class="card-img-top d-block mx-auto img-fluid" alt="Card image cap" style="max-width: 80%;">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Alat Sensor Detak Jantung</b></h5>
+                            <p class="card-text">Rakitan alat sensor detak jantung menggunkan pulse sensor heart dan Arduino Uno.</p>
+                            <p class="mb-0">Pemrograman dan Sumber Daya:</p>
+                            <div class="d-flex align-items-center mb-4">
+                                <img src="https://cdn-icons-png.flaticon.com/128/919/919841.png" alt="Java Logo" width="30" class="me-2">
+                                <img src="https://www.arduino.cc/wiki/static/0b57566f18443e2eda0642a3fb23c438/d0c94/ArduinoCommunityLogo_CustomArea.png" alt="Java Logo" width="30" class="me-2">
+                            </div>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectPreviewModal2">Lihat Projek</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="asset/ilt-desktop.png" class="card-img-top d-block mx-auto img-fluid" alt="Card image cap" style="max-width: 80%;">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Aplikasi Toko Kopi Berbasis Desktop</b></h5>
+                            <p class="card-text">Aplikasi sederhana untuk mengelola toko kopi.</p>
+                            <p class="mb-0">Pemrograman dan Sumber Daya:</p>
+                            <div class="d-flex align-items-center mb-4">
+                                <img src="https://cdn-icons-png.flaticon.com/128/226/226777.png" alt="Java Logo" width="30" class="me-2">
+                                <img src="https://cdn-icons-png.flaticon.com/128/919/919836.png" alt="Java Logo" width="30" class="me-2">
+                            </div>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectPreviewModal3">Lihat Projek</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Kontak</h2>
+            <div class="row">
+                <div class="text-center">
+                    <a href="https://twitter.com" target="_blank" class="btn btn-outline-dark me-2">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://instagram.com/johnpn_" target="_blank" class="btn btn-outline-danger me-2">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/john-presly-nasution-2310092b7/" target="_blank" class="btn btn-outline-primary me-2">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nama</label>
+                    <input type="text" class="form-control" id="name" placeholder="Nama Anda">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Email Anda">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Pesan</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Tulis pesan Anda..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Kirim</button>
+            </form> -->
+        </div>
+    </section>
+
+    <!-- Preview Projek 1 -->
+    <div class="modal fade" id="projectPreviewModal1" tabindex="-1" aria-labelledby="projectPreviewLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectPreviewLabel1">Preview Proyek 1</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Iframe untuk Preview Proyek 1 -->
+                    <div class="ratio ratio-16x9">
+                        <iframe src="asset/app-android.png" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preview Projek 2 -->
+    <div class="modal fade" id="projectPreviewModal2" tabindex="-1" aria-labelledby="projectPreviewLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectPreviewLabel1">Preview Proyek 2</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Iframe untuk Preview Proyek 1 -->
+                    <div class="ratio ratio-16x9">
+                        <iframe src="asset/app-mikro.png" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preview Projek 3 -->
+    <div class="modal fade" id="projectPreviewModal3" tabindex="-1" aria-labelledby="projectPreviewLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectPreviewLabel1">Preview Proyek 3</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Iframe untuk Preview Proyek 1 -->
+                    <div class="ratio ratio-16x9 d-flex">
+                        <iframe src="asset/app-maria-desktop.png" style="align-items: center;" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; John | Dibuat dengan library Bootstrap</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS (Opsional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
