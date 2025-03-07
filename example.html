@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Cards</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+        .card {
+            width: 18rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Project List</h2>
+    <div id="card-container" class="d-flex flex-wrap justify-content-center g-3">
+        <!-- Project cards will be inserted here by JavaScript -->
+    </div>
+</div>
+
+<script>
+    const projek = [
+        {
+            namaprojek: "Projek 1",
+            tautan: "https://example.com/projek1"
+        },
+        {
+            namaprojek: "Projek 2",
+            tautan: "https://example.com/projek2"
+        },
+        {
+            namaprojek: "Projek 3",
+            tautan: "https://example.com/projek2"
+        }
+        // Tambahkan lebih banyak projek sesuai kebutuhan
+    ];
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const cardContainer = document.getElementById('card-container');
+
+        projek.forEach(projek => {
+            const card = document.createElement('div');
+            card.className = 'card';
+
+            card.innerHTML = `
+                <div class="card-body">
+                    <h5 class="card-title">${projek.namaprojek}</h5>
+                    <a href="${projek.tautan}" class="btn btn-primary" target="_blank">Lihat Projek</a>
+                </div>
+            `;
+
+            cardContainer.appendChild(card);
+        });
+    });
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
