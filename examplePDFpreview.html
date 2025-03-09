@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview PDF Mini</title>
+    <style>
+        .card {
+            width: 380px;
+            height: 280px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .preview {
+            width: 100%;
+            height: 100%;
+            border: none;
+            pointer-events: none; /* Mencegah interaksi seperti zoom */
+        }
+    </style>
+</head>
+<body>
+
+<div class="card" onclick="openPDF()">
+    <iframe class="preview" src="https://drive.google.com/file/d/1zPZpvmT9YmrSSqmL8W0e8xiTnMGPb2mF/preview"></iframe>
+</div>
+
+<script>
+    function openPDF() {
+        window.open("https://drive.google.com/file/d/1zPZpvmT9YmrSSqmL8W0e8xiTnMGPb2mF/view", "_blank");
+    }
+</script>
+
+</body>
+</html>

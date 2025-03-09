@@ -85,6 +85,20 @@
             transform: translateY(-10px);
             box-shadow: 0 8px 16px rgba(0,0,0,0.2);
         }
+
+        /* Typing Text */
+        h6 {
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .typing span {
+            border-right: 2px solid black;
+            animation: blink 0.7s steps(1) infinite;
+        }
+        @keyframes blink {
+            0%, 100% { border-color: transparent; }
+            50% { border-color: black; }
+        }
     </style>
 </head>
 <body>
@@ -109,13 +123,15 @@
 
     <div class="d-flex justify-content-center mt-5 gap-1">
         <div class="d-flex flex-column flex-md-row justify-content-center align-items-center border border-black p-4 gap-5 rounded-3 shadow-lg p-3 mb-5 bg-body-tertiary">
-            <div class="col-md-4 text-center text-md-start">
+            <div class="col-md-4 text-center ">
                 <img src="asset/foto-diri.png" class="rounded-circle border profile-img" width="200px" alt="Foto">
+                <!-- <h5>I am</h5> -->
+                <h6 class="mt-2">I am <span id="typing-text"></span></h6>
             </div>
             <div class="card bg-body-secondary text-dark mx-3" style="max-width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title">About Me</h5>
-                    <p class="card-text">I am a web developer with a passion for creating beautiful and functional websites. I have over 10 years of experience in the field.</p>
+                    <p class="card-text">I am a passionate beginner in the world of technology. The experience I gained during my studies has provided me with fundamentals in Web Developer, Cloud Computing, Networking, and IoT. I also understand how to use Google Office to support my learning productivity and during project work..</p>
                 </div>
             </div>
         </div>
@@ -155,12 +171,40 @@
         </div>
     </div>
 
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Certificate</h2>
+        <div class="border border-black p-3 rounded-3">
+            <h3 class="mb-4">Dicoding</h3>
+            <div id="card-container-certificate" class="card-container">
+                <!-- Project cards will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
     
 
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
       </svg>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="script/script.js"></script>
+    <script src="script/projectList.js"></script>
+    <script src="script/certificateList.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const textToType = "John Presly Nasution";
+            const typingTextElement = document.getElementById('typing-text');
+            let index = 0;
+
+            function typeText() {
+                if (index < textToType.length) {
+                    typingTextElement.textContent += textToType.charAt(index);
+                    index++;
+                    setTimeout(typeText, 150);
+                }
+            }
+
+            typeText();
+        });
+    </script>
 </body>
 </html>

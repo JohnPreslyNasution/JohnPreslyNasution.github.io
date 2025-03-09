@@ -1,0 +1,15 @@
+For the certificate section, you can explain each course platform. (Dicoding, Udemy, Codepolitan, Cisco, Webinar, ext)
+
+Ide:
+1. Tambahin nama di card (done)
+
+Lanjutin:
+1. Kumpulin Sertifikat
+2. Atur foto buat detail project
+3. Tambahin Footer
+4. 
+
+Project Yang Belum kemasukin:
+1. JejakBatik
+2. Sawala
+3. 

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Typing Text</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        h5 {
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+        }
+        .typing span {
+            border-right: 2px solid black;
+            animation: blink 0.7s steps(1) infinite;
+        }
+        @keyframes blink {
+            0%, 100% { border-color: transparent; }
+            50% { border-color: black; }
+        }
+    </style>
+</head>
+<body>
+    <h5>I am <span id="typing-text"></span></h5>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const textToType = "John Presly Nasution";
+            const typingTextElement = document.getElementById('typing-text');
+            let index = 0;
+
+            function typeText() {
+                if (index < textToType.length) {
+                    typingTextElement.textContent += textToType.charAt(index);
+                    index++;
+                    setTimeout(typeText, 150);
+                }
+            }
+
+            typeText();
+        });
+    </script>
+</body>
+</html>
